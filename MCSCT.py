@@ -4,10 +4,8 @@ import io
 import time
 import os
 
-
 os.system('cls')
-print("MCSCT 1.0.0")
-print("")
+print("MCSCT 1.0.0\n")
 
 
 def main():
@@ -22,11 +20,10 @@ def main():
         return print('Invalid Selection')
 
 
-## FORGE ##
+# FORGE #
 def forgedl():
 
     fordir = './forge-server'
-
 
     if os.path.isdir(fordir) is False:
         print('Creating Directory')
@@ -146,6 +143,8 @@ def forgegetinput(fordir):
         time.sleep(1)
         return forgegetinput(fordir)
 
+
+# FABRIC DOWNLOADER #
 def fabricgetinput(fabdir):
 
     with urllib.request.urlopen(
@@ -187,6 +186,7 @@ def fabricgetinput(fabdir):
 
     except Exception:
         return fabricgetinput(fabdir)
+
 
 if __name__ == '__main__':
     main()
